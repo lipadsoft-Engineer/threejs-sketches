@@ -1,5 +1,6 @@
 console.log("Hello, Icosahedron!");
 import * as THREE from 'three';
+import { OrbitControls } from "jsm/controls/OrbitControls.js";
 
 // Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
