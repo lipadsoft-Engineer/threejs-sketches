@@ -30,7 +30,7 @@ scene.add(mesh);
 renderer.render(scene, camera);
 
 
-// Try using phong material mesh
+// Try using Standard material mesh
 const renderer1 = new THREE.WebGLRenderer({antialias: true});
 
 const w1 = window.innerWidth;
@@ -57,9 +57,15 @@ const mat1 = new THREE.MeshStandardMaterial({
     color: 0xffffff,
     flatShading: true,
     roughness: 0.8,
-    metalness: 0.2
+    metalness: 0.2,
   });
 const mesh1 = new THREE.Mesh(geo1, mat1);
 scene1.add(mesh1);
 
+function animate() {
+    requestAnimationFrame(animate);
+    mesh1.rotation.x += 0.005;
+    mesh1.rotation.y += 0.01;
 renderer1.render(scene1, camera1);
+}
+animate();
