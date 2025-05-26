@@ -1,7 +1,6 @@
 console.log("Hello, Icosahedron!");
 import * as THREE from 'three';
 
-
 // Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
 
@@ -27,7 +26,12 @@ const mat = new THREE.MeshNormalMaterial(
 const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
 
+function move() {
+    requestAnimationFrame(move);
+    mesh.rotation.y += 0.001
 renderer.render(scene, camera);
+}
+move();
 
 
 // Try using Standard material mesh
