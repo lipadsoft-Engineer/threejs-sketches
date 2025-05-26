@@ -18,6 +18,8 @@ const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 const scene = new THREE.Scene();
 
+const control = new OrbitControls(camera, renderer.domElement);
+
 const geo = new THREE.IcosahedronGeometry(1.0, 2);
 const mat = new THREE.MeshNormalMaterial(
     { 
