@@ -1,6 +1,6 @@
 console.log("Hello, Icosahedron!");
 import * as THREE from 'three';
-import { OrbitControls } from "jsm/controls/OrbitControls.js";
+import { OrbitControls } from 'three/examples/jsm/Addons.js';
 
 // Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
@@ -56,6 +56,8 @@ scene1.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1); 
 directionalLight.position.set(1, 1, 1);
 scene1.add(directionalLight);
+
+const controls = new OrbitControls(camera1, renderer1.domElement);
 
 const geo1 = new THREE.IcosahedronGeometry(1.0, 2);
 const mat1 = new THREE.MeshStandardMaterial({
