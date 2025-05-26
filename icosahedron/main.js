@@ -1,6 +1,8 @@
 console.log("Hello, Icosahedron!");
 import * as THREE from 'three';
 
+
+// Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
 
 const w = window.innerWidth;
@@ -18,7 +20,7 @@ const scene = new THREE.Scene();
 
 const geo = new THREE.IcosahedronGeometry(1.0, 2);
 const mat = new THREE.MeshNormalMaterial(
-    { color: 0xccff,
+    { 
         wireframe: true,
     }
 );
@@ -26,3 +28,33 @@ const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
 
 renderer.render(scene, camera);
+
+
+// Try using phong material mesh
+const renderer1 = new THREE.WebGLRenderer({antialias: true});
+
+const w1 = window.innerWidth;
+const h1 = window.innerHeight;
+renderer1.setSize(w1, h1);
+document.body.appendChild(renderer1.domElement);
+
+const fov1 = 75;
+const aspect1 = w1 / h1;
+const near1 = 0.1;
+const far1 = 10; 
+const camera1 = new THREE.PerspectiveCamera(fov1, aspect1, near1, far1);
+camera1.position.z = 2;
+const scene1 = new THREE.Scene();
+
+
+const geo1 = new THREE.IcosahedronGeometry(1.0, 2);
+const mat1 = new THREE.MeshStandardMaterial({
+    color: 0xffffff,
+    flatShading: true,
+    roughness: 0.8,
+    metalness: 0.2
+  });
+const mesh1 = new THREE.Mesh(geo1, mat1);
+scene1.add(mesh1);
+
+renderer1.render(scene1, camera1);
