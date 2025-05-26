@@ -46,6 +46,11 @@ const camera1 = new THREE.PerspectiveCamera(fov1, aspect1, near1, far1);
 camera1.position.z = 2;
 const scene1 = new THREE.Scene();
 
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); 
+scene1.add(ambientLight);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1); 
+directionalLight.position.set(1, 1, 1);
+scene1.add(directionalLight);
 
 const geo1 = new THREE.IcosahedronGeometry(1.0, 2);
 const mat1 = new THREE.MeshStandardMaterial({
