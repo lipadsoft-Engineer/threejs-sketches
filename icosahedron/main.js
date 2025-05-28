@@ -110,6 +110,12 @@ const matIII = new THREE.MeshStandardMaterial({
 const meshIII = new THREE.Mesh(geoIII, matIII);
 sceneIII.add(meshIII);
 
+const wireMat = new THREE.MeshBasicMaterial({
+    wireframe: true,
+})
+const wireMesh = new THREE.Mesh(geoIII, wireMat);
+
+
 function animateIII() {
     requestAnimationFrame(animateIII);
     meshIII.rotation.x += 0.005;
