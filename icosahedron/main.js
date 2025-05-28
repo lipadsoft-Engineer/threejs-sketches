@@ -97,12 +97,6 @@ cameraIII.position.z = 2;
 
 const sceneIII = new THREE.Scene();
 
-// const ambientLightIII = new THREE.AmbientLight(0xffffff, 0.5); 
-// sceneIII.add(ambientLightIII);
-// const directionalLightIII = new THREE.DirectionalLight(0xffffff, 1); 
-// directionalLightIII.position.set(1, 1, 1);
-// sceneIII.add(directionalLightIII);
-
 const hemiLight = new THREE.HemisphereLight(0x00009a, 0x6b2299);
 sceneIII.add(hemiLight);
 
