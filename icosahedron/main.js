@@ -1,3 +1,4 @@
+// Icosahedron II - Try using Normal material mesh
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 
@@ -79,7 +80,7 @@ renderer1.render(scene1, camera1);
 animate();
 
 
-// Icosa hedron III - 
+// Icosa hedron III - Add a white wireframe mesh with HemisphereLight 
 const rendererIII = new THREE.WebGLRenderer({antialias: true});
 
 const wIII = window.innerWidth;
