@@ -114,7 +114,7 @@ const wireMat = new THREE.MeshBasicMaterial({
     wireframe: true,
 })
 const wireMesh = new THREE.Mesh(geoIII, wireMat);
-scene.add(wireMesh);
+sceneIII.add(wireMesh);
 
 
 function animateIII() {
