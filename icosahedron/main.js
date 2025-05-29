@@ -95,6 +95,8 @@ const farIII = 10;
 const cameraIII = new THREE.PerspectiveCamera(fovIII, aspectIII, nearIII, farIII);
 cameraIII.position.z = 2;
 
+const sceneIII = new THREE.scene();
+
 const ambientLightIII = new THREE.AmbientLight(0xffffff, 0.5); 
 scene1.add(ambientLightIII);
 const directionalLightIII = new THREE.DirectionalLight(0xffffff, 1); 
