@@ -88,3 +88,9 @@ const hIII = window.innerHeight;
 rendererIII.setSize(wIII, hIII);
 document.body.appendChild(rendererIII.domElement);
 
+const fovIII = 75;
+const aspectIII = wIII / hIII;
+const nearIII = 0.1;
+const farIII = 10; 
+const cameraIII = new THREE.PerspectiveCamera(fovIII, aspectIII, nearIII, farIII);
+cameraIII.position.z = 2;
