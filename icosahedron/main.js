@@ -95,13 +95,16 @@ const farIII = 10;
 const cameraIII = new THREE.PerspectiveCamera(fovIII, aspectIII, nearIII, farIII);
 cameraIII.position.z = 2;
 
-const sceneIII = new THREE.scene();
+const sceneIII = new THREE.Scene();
 
-const ambientLightIII = new THREE.AmbientLight(0xffffff, 0.5); 
-scene1.add(ambientLightIII);
-const directionalLightIII = new THREE.DirectionalLight(0xffffff, 1); 
-directionalLightIII.position.set(1, 1, 1);
-sceneIII.add(directionalLightIII);
+// const ambientLightIII = new THREE.AmbientLight(0xffffff, 0.5); 
+// sceneIII.add(ambientLightIII);
+// const directionalLightIII = new THREE.DirectionalLight(0xffffff, 1); 
+// directionalLightIII.position.set(1, 1, 1);
+// sceneIII.add(directionalLightIII);
+
+const hemiLight = new THREE.HemisphereLight(0x00009a, 0x6b2299);
+sceneIII.add(hemiLight);
 
 const geoIII = new THREE.IcosahedronGeometry(1.0, 2);
 const matIII = new THREE.MeshStandardMaterial({
