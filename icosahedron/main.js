@@ -102,3 +102,21 @@ scene1.add(ambientLightIII);
 const directionalLightIII = new THREE.DirectionalLight(0xffffff, 1); 
 directionalLightIII.position.set(1, 1, 1);
 sceneIII.add(directionalLightIII);
+
+const geoIII = new THREE.IcosahedronGeometry(1.0, 2);
+const matIII = new THREE.MeshStandardMaterial({
+    color: 0xffffff,
+    flatShading: true,
+    roughness: 0.8,
+    metalness: 0.2,
+  });
+const meshIII = new THREE.Mesh(geoIII, matIII);
+sceneIII.add(meshIII);
+
+function animateIII() {
+    requestAnimationFrame(animateIII);
+    meshIII.rotation.x += 0.005;
+    meshIII.rotation.y += 0.01;
+rendererIII.render(sceneIII, cameraIII);
+}
+animateIII();
