@@ -2,7 +2,7 @@ console.log("Hello, Icosahedron!");
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 
-// Try using Normal material mesh
+// Icosahedron I - Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
 
 const w = window.innerWidth;
@@ -37,7 +37,7 @@ renderer.render(scene, camera);
 move();
 
 
-// Try using Standard material mesh
+// Icosahedron II - Try using Standard material mesh
 const renderer1 = new THREE.WebGLRenderer({antialias: true});
 
 const w1 = window.innerWidth;
@@ -78,3 +78,13 @@ function animate() {
 renderer1.render(scene1, camera1);
 }
 animate();
+
+
+// Icosa hedron III - 
+const rendererIII = new THREE.WebGLRenderer({antialias: true});
+
+const wIII = window.innerWidth;
+const hIII = window.innerHeight;
+rendererIII.setSize(wIII, hIII);
+document.body.appendChild(rendererIII.domElement);
+
