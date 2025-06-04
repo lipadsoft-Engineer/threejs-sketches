@@ -5,7 +5,7 @@ import spline from './spline';
 
 
 // create a Renderer and set its size
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer();
 
 const w = window.innerWidth;
 const h = window.innerHeight;
@@ -21,14 +21,14 @@ const scene = new THREE.Scene();
 const fov = 75;
 const aspect = w / h;
 const near = 0.1;
-const far = 10;
+const far = 1000;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 2;
+camera.position.z = 5;
 
 // apply orbit controls
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.dampingFactor = 0.03;
+const control = new OrbitControls(camera, renderer.domElement);
+control.enableDamping = true;
+control.dampingFactor = 0.03;
 
 // create a line geometry from the spline
 const points = spline.getPoints(100);
