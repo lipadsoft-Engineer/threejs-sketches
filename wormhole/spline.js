@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+
+// create a curve path
 const curvePath = [10.136184463414924, -1.374508746897471, 10.384881573913269,
 	9.1152593889854714, -1.374508746897471, 8.5846792797570011,
 	9.0669355709754882, -1.0665123466336568, 5.8937771631608156,
@@ -37,3 +39,18 @@ const curvePath = [10.136184463414924, -1.374508746897471, 10.384881573913269,
 	11.288646925965876, -1.374508746897471, 11.926359497447137,
 	10.136184463414924, -1.374508746897471, 10.384881573913269
 ];
+
+// Make the curve path 3D
+const points = [];
+const len = curvePath.length;
+for (let p = 0; p < len; p += 3) {
+  points.push(new THREE.Vector3(
+    curvePath[p], 
+    curvePath[p + 1], 
+    curvePath[p + 2])
+  );
+}
+
+const spline = new THREE.CatmullRomCurve3(points);
+
+export default spline;
