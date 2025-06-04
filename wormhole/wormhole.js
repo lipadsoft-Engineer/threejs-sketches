@@ -18,6 +18,12 @@ const far = 10;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 2;
 
+// apply orbit controls
+const controls = new OrbitControls(camera, renderer.domElement);
+
+// create a Scene
+const scene = new THREE.Scene();
+
 
 
 
