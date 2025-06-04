@@ -34,10 +34,14 @@ controls.dampingFactor = 0.03;
 const points = spline.getPoints(100);
 const geo = new THREE.BufferGeometry().setFromPoints(points);
 const mat = new THREE.LineBasicMaterial({
-    color: 0x00ff00
+    color: 0xff0000
 });
 const line = new THREE.Line(geo, mat);
 scene.add(line);
+
+// Add hemlight
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
+scene.add(hemiLight);
 
 
 
