@@ -10,6 +10,8 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 const w = window.innerWidth;
 const h = window.innerHeight;
 renderer.setSize(w, h);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.body.appendChild(renderer.domElement);
 
 // create a Scene
