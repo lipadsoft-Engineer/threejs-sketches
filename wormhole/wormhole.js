@@ -24,6 +24,13 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // create a Scene
 const scene = new THREE.Scene();
 
+// Define a function to animate and render
+function animate(){
+
+    renderer.render(scene, camera);
+}
+animate();
+
 
 
 
