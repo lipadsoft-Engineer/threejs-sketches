@@ -2,6 +2,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import spline from './spline';
+import { texture3D } from 'three/tsl';
 
 
 // create a Renderer and set its size
@@ -37,7 +38,16 @@ const mat = new THREE.LineBasicMaterial({
     color: 0xff0000
 });
 const line = new THREE.Line(geo, mat);
-scene.add(line);
+
+// Create a tube geometry
+const tubeGeo = new THREE.TubeGeometry(spline, 222, 0.5, 16, texture3D);
+const tubeMat = new THREE.MeshStandardMaterial({
+    color: 0x0099ff, 
+    side: THREE.DoubleSide,
+    wireframe: true
+});
+const tube = new THREE.Mesh(tubeGeo, tubeMat);
+scene.add(tube);
 
 // Add hemlight
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
