@@ -41,7 +41,7 @@ const line = new THREE.Line(geo, mat);
 
 // tube geometry from the spline
 const tubeGeo = new THREE.TubeGeometry(spline, 222, 0.5, 16, texture3D);
-const tubeMat = new THREE.MeshStandardMaterial({
+const tubeMat = new THREE.MeshBasicMaterial({
     color: 0x0099ff, 
     side: THREE.DoubleSide,
     wireframe: true
