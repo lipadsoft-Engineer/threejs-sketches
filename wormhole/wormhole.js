@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import spline from './spline';
-import { texture3D } from 'three/tsl';
+import { rotate, texture3D } from 'three/tsl';
 
 
 // Renderer and set its size
@@ -74,7 +74,23 @@ const numBoxes = 55;
 const size = 0.075;
 const boxGeo = new THREE.BoxGeometry(size, size, size);
 for (let i = 0; i < numBoxes; i += 1){
-
+    const boxMat = new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        wireframe: true
+    });
+    const box = new THREE.Mesh(boxGeo, boxMat);
+    const p = ( i / numBoxes * Math.random() * 0.1) % 1;
+    const pos = tubeGeo.parameters.path.getPointAt(p);
+    pos.x = Math.random() - 0.4;
+    pos.z = Math.random() - 0.4;
+    box.position.copy(pos);
+    const rate = new THREE.Vector3(
+        Math.random() * Math.PI,
+        Math.random() * Math.PI,
+        Math.random() * Math.PI
+    );
+    box.rotation.set(rotate.x, rotate.y, rotate.z);
+    scene.add(box);
 }
 
 
