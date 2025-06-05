@@ -69,6 +69,15 @@ function updateCamera(t){
 }
 
 
+// Boxes along the path
+const numBoxes = 55;
+const size = 0.075;
+const boxGeo = new THREE.BoxGeometry(size, size, size);
+for (let i = 0; i < numBoxes; i += 1){
+
+}
+
+
 // function to animate and render
 function animate(t = 0){
     requestAnimationFrame(animate);
