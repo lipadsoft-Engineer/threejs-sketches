@@ -5,7 +5,7 @@ import spline from './spline';
 import { texture3D } from 'three/tsl';
 
 
-// create a Renderer and set its size
+// Renderer and set its size
 const renderer = new THREE.WebGLRenderer();
 
 const w = window.innerWidth;
@@ -18,7 +18,7 @@ document.body.appendChild(renderer.domElement);
 // create a Scene
 const scene = new THREE.Scene();
 
-// create a Camera and set its position
+// Camera and set its position
 const fov = 75;
 const aspect = w / h;
 const near = 0.1;
@@ -26,12 +26,12 @@ const far = 1000;
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 5;
 
-// apply orbit controls
+// applying orbit controls
 const control = new OrbitControls(camera, renderer.domElement);
 control.enableDamping = true;
 control.dampingFactor = 0.03;
 
-// create a line geometry from the spline
+// line geometry from the spline
 const points = spline.getPoints(100);
 const geo = new THREE.BufferGeometry().setFromPoints(points);
 const mat = new THREE.LineBasicMaterial({
@@ -39,7 +39,7 @@ const mat = new THREE.LineBasicMaterial({
 });
 const line = new THREE.Line(geo, mat);
 
-// Create a tube geometry
+// tube geometry from the spline
 const tubeGeo = new THREE.TubeGeometry(spline, 222, 0.5, 16, texture3D);
 const tubeMat = new THREE.MeshStandardMaterial({
     color: 0x0099ff, 
@@ -49,13 +49,15 @@ const tubeMat = new THREE.MeshStandardMaterial({
 const tube = new THREE.Mesh(tubeGeo, tubeMat);
 scene.add(tube);
 
-// Add hemlight
+// hemlight
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
 scene.add(hemiLight);
 
 
+// function to update camera for fly thru animation
 
-// Define a function to animate and render
+
+// function to animate and render
 function animate(){
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
