@@ -49,10 +49,6 @@ const tubeMat = new THREE.MeshStandardMaterial({
 const tube = new THREE.Mesh(tubeGeo, tubeMat);
 scene.add(tube);
 
-// hemlight
-const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
-scene.add(hemiLight);
-
 
 // update camera for fly thru animation
 function updateCamera(t){
