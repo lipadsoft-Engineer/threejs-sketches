@@ -17,6 +17,7 @@ document.body.appendChild(renderer.domElement);
 
 // create a Scene
 const scene = new THREE.Scene();
+scene.fog = new THREE.FogExp2(0x000000, 0.4);
 
 // Camera and set its position
 const fov = 75;
