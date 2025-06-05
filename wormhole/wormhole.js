@@ -69,8 +69,8 @@ function updateCamera(t){
 // function to animate and render
 function animate(t = 0){
     requestAnimationFrame(animate);
-    renderer.render(scene, camera);
     updateCamera(t);
+    renderer.render(scene, camera);
     control.update();
 }
 animate();
