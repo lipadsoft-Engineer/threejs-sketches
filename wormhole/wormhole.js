@@ -48,7 +48,13 @@ const tubeMat = new THREE.MeshBasicMaterial({
     wireframe: true
 });
 const tube = new THREE.Mesh(tubeGeo, tubeMat);
-scene.add(tube);
+// scene.add(tube);
+
+// Edges geometry
+const edgeGeo = new THREE.EdgesGeometry(tubeGeo, 0.05);
+const lineMat = new THREE.LineBasicMaterial({color: 0xffffff});
+const tubeLine = new THREE.LineSegments(edgeGeo, lineMat);
+scene.add(tubeLine);
 
 
 // update camera for fly thru animation
