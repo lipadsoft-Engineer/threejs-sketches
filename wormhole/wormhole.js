@@ -57,7 +57,7 @@ scene.add(hemiLight);
 
 // Define a function to animate and render
 function animate(){
-
+    requestAnimationFrame(animate);
     renderer.render(scene, camera);
 }
 animate();
