@@ -56,8 +56,8 @@ scene.add(hemiLight);
 
 // update camera for fly thru animation
 function updateCamera(t){
-    const time = t * 0.0005;
-    const loopTime = 20 * 1000;
+    const time = t * 0.05;
+    const loopTime = 10 * 1000;
     const point = ( time % loopTime) / loopTime;
     const pos = tubeGeo.parameters.path.getPointAt(point);
     const lookAt = tubeGeo.parameters.path.getPointAt((point + 0.03) % 1);
