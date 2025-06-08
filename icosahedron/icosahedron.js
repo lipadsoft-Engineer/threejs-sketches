@@ -1,6 +1,10 @@
 // Icosahedron II - Try using Normal material mesh
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/Addons.js';
+// import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+// import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
+import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
 
 // Icosahedron I - Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
