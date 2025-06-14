@@ -1,10 +1,5 @@
-// Icosahedron II - Try using Normal material mesh
-// import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
-// import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-
+import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js?module';
 
 // Icosahedron I - Try using Normal material mesh
 const renderer = new THREE.WebGLRenderer({antialias: true});
@@ -36,7 +31,7 @@ scene.add(mesh);
 function move() {
     requestAnimationFrame(move);
     mesh.rotation.y += 0.001
-renderer.render(scene, camera);
+    renderer.render(scene, camera);
 }
 move();
 
@@ -79,7 +74,7 @@ function animate() {
     requestAnimationFrame(animate);
     mesh1.rotation.x += 0.005;
     mesh1.rotation.y += 0.01;
-renderer1.render(scene1, camera1);
+    renderer1.render(scene1, camera1);
 }
 animate();
 
@@ -87,7 +82,7 @@ animate();
 // Icosa hedron III - Add a white wireframe mesh with HemisphereLight 
 const rendererIII = new THREE.WebGLRenderer({antialias: true});
 
-const wIII = window.innerWidth;
+const wIII = window.innerWidth ;
 const hIII = window.innerHeight;
 rendererIII.setSize(wIII, hIII);
 document.body.appendChild(rendererIII.domElement);
@@ -125,6 +120,6 @@ function animateIII() {
     requestAnimationFrame(animateIII);
     meshIII.rotation.x += 0.005;
     meshIII.rotation.y += 0.01;
-rendererIII.render(sceneIII, cameraIII);
+    rendererIII.render(sceneIII, cameraIII);
 }
 animateIII();
