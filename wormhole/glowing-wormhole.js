@@ -1,9 +1,11 @@
-import * as THREE from "three";
-import { OrbitControls } from 'jsm/controls/OrbitControls.js';
-import spline from "./spline.js";
-import { EffectComposer } from "jsm/postprocessing/EffectComposer.js";
-import { RenderPass } from "jsm/postprocessing/RenderPass.js";
-import { UnrealBloomPass } from "jsm/postprocessing/UnrealBloomPass.js";
+import * as THREE from 'https://cdn.skypack.dev/three@0.160.0';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+import { EffectComposer } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js';
+
+import spline from './spline.js';
+
 
 const w = window.innerWidth;
 const h = window.innerHeight;
