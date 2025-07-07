@@ -21,6 +21,20 @@ body {
     margin: 20px 0px;
     padding: 20px 0px;
 }
+#header h1{
+    font-size: 2.5em;
+    color: #8f7a03;
+    margin-bottom: 10px;
+}
+#header h3{
+    font-size: 1.5em;
+    color: #60aa00;
+    margin-bottom: 10px;
+}
+#header h4{
+    font-size: 1.2em;
+    color: #333;
+}   
 
 /* style for links */
 #link-sketches{
