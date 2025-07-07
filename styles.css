@@ -44,7 +44,6 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #f0f0f0;
-    margin: 20px 0px;
     padding: 20px 0px;
 }
 
@@ -66,4 +65,30 @@ body {
 #link-sketches ul li a:hover{
     background: none;
     color: #8f7a03;
+}
+
+/* style for footer */
+#footer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 20px 0px;
+}
+
+#footer .about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#footer .about-me .profile-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
