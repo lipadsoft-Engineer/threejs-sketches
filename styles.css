@@ -79,6 +79,10 @@ body {
 }
 
 #footer .about-me{
+    width: 70vw;
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: .5px solid #8f7a03;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +91,8 @@ body {
 
 #footer .about-me .about-me-img h3{
     color: #8f7a03;
+    font-size: 1.3rem;
+    font-weight: bolder;
 }
 
 #footer .about-me .about-me-img .profile-pic{
