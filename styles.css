@@ -109,5 +109,18 @@ body {
     line-height: 1.7;
     text-align: left;
     font-family: monospace;
-    /* font-family: 'Noto Sans', sans-serif; */
+}
+#footer .about-me .about-me-txt .contacts{
+    display: flex;
+    align-items: center;
+}
+#footer .about-me .about-me-txt .contacts a{
+    margin: 20px 10px;
+    color: #333;
+    font-size: 1.8em;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+#footer .about-me .about-me-txt .contacts a:hover{
+    color: #8f7a03;
 }
