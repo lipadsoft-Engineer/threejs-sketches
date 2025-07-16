@@ -124,3 +124,9 @@ body {
 #footer .about-me .about-me-txt .contacts a:hover{
     color: #8f7a03;
 }
+
+#footer .copyright{
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #4e4e4e;
+}
