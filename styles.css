@@ -10,6 +10,14 @@ body {
     box-sizing: border-box;
 }
 
+/* navbar */
+#navbar{
+    width: 100vw;
+    padding: 20px 0px;
+    margin-bottom: 1px;
+    background: linear-gradient(80deg, #60aa00, #9f459fec,#9f459fcc, #8f7a03);
+}
+
 /* style for headers */
 #header{
     width: 100vw;
@@ -20,6 +28,7 @@ body {
     background-color: #f0f0f0;
     margin: 20px 0px;
     padding: 20px 0px;
+    margin-top: 0px;
 }
 #header h1{
     font-size: 2.5em;
