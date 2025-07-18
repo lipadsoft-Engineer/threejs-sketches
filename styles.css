@@ -43,6 +43,7 @@ body {
 #header h4{
     font-size: 1.2em;
     color: #333;
+    font-weight: lighter;
 }   
 
 /* style for links */
