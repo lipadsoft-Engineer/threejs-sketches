@@ -9,3 +9,17 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* back link */
+#back{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#back a{
+    text-decoration: none;
+    background-color: #60aa00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
