@@ -19,3 +19,9 @@
     const pointLight = new THREE.PointLight(0xffffff, 1);
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
+
+    // Donut
+    const geometry = new THREE.TorusGeometry(1, 0.4, 16, 100);
+    const material = new THREE.MeshStandardMaterial({ color: 0xffa500, metalness: 0.3, roughness: 0.6 });
+    const donut = new THREE.Mesh(geometry, material);
+    scene.add(donut);
