@@ -25,3 +25,8 @@
     const material = new THREE.MeshStandardMaterial({ color: 0xffa500, metalness: 0.3, roughness: 0.6 });
     const donut = new THREE.Mesh(geometry, material);
     scene.add(donut);
+
+    // controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+
+    
