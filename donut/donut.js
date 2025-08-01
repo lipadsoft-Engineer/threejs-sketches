@@ -29,4 +29,12 @@
     // controls
     const controls = new OrbitControls(camera, renderer.domElement);
 
-    
+    // Animate
+    function animate() {
+      requestAnimationFrame(animate);
+      donut.rotation.x += 0.01;
+      donut.rotation.y += 0.02;
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
