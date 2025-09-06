@@ -11,15 +11,21 @@ body {
 }
 
 /* back link */
-#back{
+#back, #back .next{
     position: absolute;
     top: 20px;
     left: 20px;
 }
-#back a{
+
+#back a, #back .next a{
     text-decoration: none;
     background-color: #60aa00;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+#back .next{
+    top: 20px;
+    left: 50px;
 }
