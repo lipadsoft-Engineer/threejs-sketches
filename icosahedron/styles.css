@@ -17,7 +17,7 @@ body {
     left: 20px;
 }
 
-#back a, .next a{
+#back a, #next a{
     text-decoration: none;
     background-color: #60aa00;
     color: #fff;
@@ -25,7 +25,7 @@ body {
     border-radius: 5px;
 }
 
-.next{
+#next{
     position: absolute;
     top: 20px;
     left: 50px;
